@@ -7,7 +7,9 @@ from src.analysis.prepare_data import utilWrapper
 app = Flask(__name__)
 CORS(app)
 
-
+@app.route('/')
+def index():
+    return '<h1>Done</h1>'
 @app.route('/data', methods=['POST'])
 @utilWrapper
 def get_data():
